@@ -1,0 +1,13 @@
+# Compiled files
+*.class
+*.jar
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Build output
+bin/
+out/
