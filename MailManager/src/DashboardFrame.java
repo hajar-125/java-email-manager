@@ -1,43 +1,26 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class ComposeFrame extends JFrame {
+public class DashboardFrame extends JFrame {
 
-    public ComposeFrame(String email, String password) {
+    public DashboardFrame(String email, String password) {
 
-        setTitle("Compose Email");
-        setSize(400, 300);
-        setLayout(new GridLayout(5, 2));
+        setTitle("Dashboard");
+        setSize(400, 200);
+        setLayout(new FlowLayout());
 
-        JTextField toField = new JTextField();
-        JTextField subjectField = new JTextField();
-        JTextArea messageArea = new JTextArea();
+        JButton readBtn = new JButton("Read Inbox");
+        JButton composeBtn = new JButton("Compose Email");
 
-        JButton sendBtn = new JButton("Send Now");
-        JButton scheduleBtn = new JButton("Send in 10 sec");
+        add(readBtn);
+        add(composeBtn);
 
-        add(new JLabel("To:"));
-        add(toField);
-        add(new JLabel("Subject:"));
-        add(subjectField);
-        add(new JLabel("Message:"));
-        add(messageArea);
-        add(sendBtn);
-        add(scheduleBtn);
-
-        sendBtn.addActionListener(e -> {
-            EmailSender.sendEmail(email, password,
-                    toField.getText(),
-                    subjectField.getText(),
-                    messageArea.getText());
+        readBtn.addActionListener(e -> {
+            EmailReceiver.readInbox(email, password);
         });
 
-        scheduleBtn.addActionListener(e -> {
-            SchedulerService.scheduleEmail(email, password,
-                    toField.getText(),
-                    subjectField.getText(),
-                    messageArea.getText(),
-                    10000);
+        composeBtn.addActionListener(e -> {
+            new ComposeFrame(email, password);
         });
 
         setVisible(true);
