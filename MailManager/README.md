@@ -130,6 +130,4 @@ Final-year AI & Data Science Engineering student at ENSAM Rabat
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/hajar-benbassou)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/hajar-125)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:benbassou.hajar@gmail.com)es Gmail SMTP/IMAP for email operations
-- Requires JavaMail libraries (automatically downloaded by setup.sh)
-- GUI built with Java Swing
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:benbassou.hajar@gmail.com)
